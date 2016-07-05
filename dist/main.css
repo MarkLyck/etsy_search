@@ -18,6 +18,9 @@ header {
   background: #fff;
   margin-bottom: 30px; }
 
+button, input {
+  outline: none; }
+
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -256,7 +259,12 @@ main .bread-crumbs {
       padding: 3px 5px;
       background: #fff;
       border: 1px solid #CCC;
-      border-radius: 3px; }
+      border-radius: 3px;
+      outline: none; }
+      .item-grid li > button:hover {
+        border: 1px solid #b3b3b3; }
+        .item-grid li > button:hover i {
+          color: #b3b3b3; }
       .item-grid li > button i {
         color: #CCC; }
     .item-grid li .favorite-btn {
@@ -264,6 +272,8 @@ main .bread-crumbs {
       position: absolute;
       top: 6px;
       right: calc(6px + 36px + 6px); }
+      .item-grid li .favorite-btn .favorited {
+        color: #F2665D; }
     .item-grid li .list-btn {
       display: none;
       position: absolute;
