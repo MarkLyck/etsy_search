@@ -32,8 +32,8 @@ header {
     .header-nav .left input {
       background: #FBFBFA;
       border: 1px solid #CFCBC8;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
       border-right: 0;
       height: 20px;
       padding: 6px;
@@ -41,13 +41,15 @@ header {
       width: 25vw; }
     .header-nav .left .search-button {
       height: 34px;
-      padding: 6px;
+      padding: 7px 15px;
       background: #34A8C4;
       border: 1px solid #2F98B1;
       border-left: 0;
       color: #fff;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px; }
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+      .header-nav .left .search-button:hover {
+        background: #44b3cd; }
   .header-nav .right {
     display: flex;
     align-items: center; }
@@ -66,25 +68,34 @@ header {
       .header-nav .right .icon-link > i {
         font-size: 1.5rem; }
       .header-nav .right .icon-link p {
+        color: #898989;
+        margin-top: 6px;
         color: #888;
         font-size: 12px; }
         .header-nav .right .icon-link p i {
+          margin-left: 3px;
           color: #888; }
       .header-nav .right .icon-link:hover {
-        color: #000; }
+        color: #363636; }
         .header-nav .right .icon-link:hover p {
-          color: #000; }
+          color: #363636; }
           .header-nav .right .icon-link:hover p i {
-            color: #000; }
+            color: #888888; }
 
 .main-categories {
   display: flex;
   align-items: center;
   height: 40px;
-  border-bottom: 1px solid #DADAD7; }
+  border-bottom: 1px solid #DADAD7;
+  font-size: 0.9rem; }
   .main-categories a {
-    margin-left: 20px;
-    color: #777777; }
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    color: #777777;
+    height: 40px; }
+    .main-categories a:hover {
+      color: #444444; }
 
 .etsy-link {
   color: #34A8C4; }
@@ -112,6 +123,14 @@ header {
       padding-bottom: 18px;
       border-bottom: 1px solid #E1E3DF;
       margin-bottom: 18px; }
+    .side-bar .side-bar-wrapper select {
+      background: none;
+      width: 100%;
+      height: 36px;
+      padding: 0 30px 0 12px;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+      color: #222; }
   .side-bar .categories {
     display: flex;
     flex-direction: column; }
@@ -134,11 +153,11 @@ form.side-bar-section {
     position: relative; }
     form.side-bar-section label a {
       margin: 6px; }
-  form.side-bar-section input[type="radio"] {
-    opacity: 0; }
   form.side-bar-section input[type="radio"]:checked + label a {
     color: #505050; }
-  form.side-bar-section label::before {
+  form.side-bar-section .radio input[type="radio"] {
+    opacity: 0; }
+  form.side-bar-section .radio label::before {
     content: '';
     height: 15px;
     width: 15px;
@@ -150,8 +169,30 @@ form.side-bar-section {
     border-radius: 50%;
     border: 1px solid #adaeaa;
     box-shadow: inset 0 1px 4px -1px #F5F5F1,inset 0 0 0 3px #fff; }
-  form.side-bar-section input[type="radio"]:checked + label::before {
+  form.side-bar-section .radio input[type="radio"]:checked + label::before {
     background: #34A8C4; }
+  form.side-bar-section .checkbox input[type="checkbox"] {
+    opacity: 0; }
+  form.side-bar-section .checkbox label::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: fontawesome;
+    content: "\f00c";
+    font-size: 0.8rem;
+    color: #fff;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    transform: translateY(-5%);
+    border-radius: 3px;
+    border: 1px solid #adaeaa;
+    box-shadow: inset 0 1px 4px -1px #F5F5F1,inset 0 0 0 3px #fff; }
+  form.side-bar-section .checkbox input[type="checkbox"]:checked + label::before {
+    color: #34A8C4; }
   form.side-bar-section .price-input-wrapper {
     display: flex;
     align-items: center; }
@@ -194,10 +235,73 @@ form.side-bar-section {
   .color-wrapper #black {
     background: #000; }
 
+main .bread-crumbs {
+  padding-bottom: 9px; }
+  main .bread-crumbs #right-bc-icon {
+    margin: 6px; }
+  main .bread-crumbs #bc-keyword {
+    font-weight: bold; }
+
 .item-grid {
   display: flex;
   flex-wrap: wrap; }
   .item-grid li {
-    width: calc(100%/5); }
+    box-sizing: border-box;
+    width: calc(25% - 18px);
+    margin: 9px;
+    border: 1px solid #E1E3DF;
+    border-radius: 3px;
+    position: relative; }
+    .item-grid li > button {
+      padding: 3px 5px;
+      background: #fff;
+      border: 1px solid #CCC;
+      border-radius: 3px; }
+      .item-grid li > button i {
+        color: #CCC; }
+    .item-grid li .favorite-btn {
+      display: none;
+      position: absolute;
+      top: 6px;
+      right: calc(6px + 36px + 6px); }
+    .item-grid li .list-btn {
+      display: none;
+      position: absolute;
+      top: 6px;
+      right: 6px; }
+      .item-grid li .list-btn .fa-caret-down {
+        margin-left: 3px;
+        font-size: 0.8rem; }
+    .item-grid li .icon-show {
+      display: block; }
+    .item-grid li a img {
+      border: 0;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+      width: 100%;
+      object-fit: contain; }
+    .item-grid li a .description {
+      margin-top: -4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      font-size: 0.8rem;
+      background: #fff;
+      padding: 6px;
+      box-sizing: border-box; }
+      .item-grid li a .description .item-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        color: #505050;
+        margin-bottom: 3px; }
+      .item-grid li a .description .item-shop-and-price {
+        display: flex;
+        justify-content: space-between;
+        color: #A2A2A2; }
+        .item-grid li a .description .item-shop-and-price .price {
+          color: #78C042; }
 
 /*# sourceMappingURL=main.css.map */

@@ -71,19 +71,19 @@
       <p>Refine your search</p>
       <div class="side-bar-wrapper">
         <p class="sidebar-title">Item type</p>
-        
-        <form class="side-bar-section" action="">
-          <div class="input-wrapper">
+
+        <form class="side-bar-section radio" action="">
+          <div class="input-wrapper radio">
             <input id="allItems" type="radio" name="item-type" checked="checked">
-            <label for="allItems"><a href="#">All items</a></label>
+            <label for="allItems"><a>All items</a></label>
           </div>
-          <div class="input-wrapper">
+          <div class="input-wrapper radio">
             <input id="handmade" type="radio" name="item-type">
-            <label for="handmade"><a href="#">Handmade</a></label>
+            <label for="handmade"><a>Handmade</a></label>
           </div>
-          <div class="input-wrapper">
+          <div class="input-wrapper radio">
             <input id="vintage" type="radio" name="item-type">
-            <label for="vintage"><a href="#">Vintage</a></label>
+            <label for="vintage"><a>Vintage</a></label>
           </div>
 
         </form>
@@ -111,14 +111,29 @@
         </div>
         <form class="side-bar-section" action="">
           <p class="sidebar-title">Ordering options</p>
-          <input type="checkbox" name="order-option" value="In your favorites">In your favorites<br>
-          <input type="checkbox" name="order-option" value="Accepts Etsy gift cards">Accepts Etsy gift cards<br>
-          <input type="checkbox" name="order-option" value="Customizable">Customizable<br>
+          <div class="input-wrapper checkbox">
+            <input id="in-favorites" type="checkbox" name="order-option">
+            <label for="in-favorites"><a>In your favorites</a></label>
+          </div>
+          <div class="input-wrapper checkbox">
+            <input id="accepts-giftcards" type="checkbox" name="order-option">
+            <label for="accepts-giftcards"><a>Accepts Etsy gift cards</a></label>
+          </div>
+          <div class="input-wrapper checkbox">
+            <input id="customizable" type="checkbox" name="order-option">
+            <label for="customizable"><a>Customizable</a></label>
+          </div>
         </form>
         <form class="side-bar-section" action="">
           <p class="sidebar-title">Shop location</p>
-          <input type="radio" name="location" value="Anywhere" checked="checked">Anywhere<br>
-          <input type="radio" name="location" value="United States">United States<br>
+          <div class="input-wrapper radio">
+            <input id="loc-anywhere" type="radio" name="location" checked="checked">
+            <label for="loc-anywhere"><a>Anywhere</a></label>
+          </div>
+          <div class="input-wrapper radio">
+            <input id="loc-us" type="radio" name="location">
+            <label for="loc-us"><a>United States</a></label>
+          </div>
           <a href="#">Choose a custom locaton</a>
         </form>
         <div class="ship-to">
@@ -146,10 +161,15 @@
       </div>
     </div>
     <main>
+      <div class="bread-crumbs">
+        <p><a href="#" class="etsy-link">All categories</a><span id="right-bc-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span id="bc-keyword">"Whiskey" </span><span id="results">(29,671 Results)</span></p>
+      </div>
       <ul class="item-grid">
 
       </ul>
     </main>
+    <!-- <button class="favorite-btn" type="button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+    <button class="list-btn" type="button"><i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-caret-down" aria-hidden="true"></i></button> -->
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
