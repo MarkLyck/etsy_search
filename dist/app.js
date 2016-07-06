@@ -1,3 +1,6 @@
+// Colors can be filtered by the color=colorRange call
+
+
 let $itemGrid = $('.item-grid')
 let $searchBtn = $('.search-button')
 let $searchBar = $('#search-bar')
