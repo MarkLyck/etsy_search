@@ -323,8 +323,16 @@ main .bread-crumbs {
     border-right: 1px solid #D9D9D9;
     border-top: 1px solid #D9D9D9;
     border-bottom: 1px solid #D9D9D9; }
+    #pagenation li a {
+      height: 100%;
+      width: 100%; }
     #pagenation li:first-child {
-      border-left: 1px solid #D9D9D9; }
+      border-left: 1px solid #D9D9D9;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    #pagenation li:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
 
 hr {
   margin-top: 30px;
@@ -348,7 +356,7 @@ hr {
 
 #footer-nav {
   display: flex;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   width: calc(160px * 5);
   padding-bottom: 30px;
   border-bottom: 1px solid #E2E2E2; }

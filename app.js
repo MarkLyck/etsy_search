@@ -2,6 +2,7 @@ let $itemGrid = $('.item-grid')
 let $searchBtn = $('.search-button')
 let $searchBar = $('#search-bar')
 let $count = $('#results')
+let $bcKeyword = $('#bc-keyword')
 let $categories = $('.categories').children('ul')
 let $pagenation = $('#pagenation')
 
@@ -12,7 +13,7 @@ let minPrice = ''
 let maxPrice = ''
 
 let apiKey = 'bc7wp4hzrqhb0n0v3la55set'
-let keywords = 'whiskey'
+let keywords = 'Whiskey'
 let category = ''
 let baseURL = 'https://api.etsy.com/v2/listings/active.js?api_key=' + apiKey
 let apiURL = baseURL + category + '&keywords=' + keywords + '&includes=Images,Shop'
@@ -21,10 +22,10 @@ let getItems = {
   type: 'GET',
   dataType: 'jsonp',
   url: apiURL,
-  success: function(response){
-    console.log(response);
+  success: (response) => {
     $itemGrid.empty()
-    $count.text('(' + response.count + ' Results)') // TODO make this thousand seperated
+    $count.text('(' + Number(response.count).toLocaleString() + ' Results)')
+    $bcKeyword.text('"' + keywords + '" ')
     let item = response.results.map(result => {
       // Return array with [title, image, url, price, shop-name]
       return [result.title, result.Images[0].url_170x135, result.url, result.price, result.Shop.shop_name]
@@ -35,6 +36,7 @@ let getItems = {
       $gridItem.hover(itemHover)
       $gridItem.children('.favorite-btn').on('click', (e) => $(e.target).toggleClass('favorited'))
     })
+    $pagenation.empty()
     if (response.count/25 > 10) {
       let pageCounter = response.count
       let numberOfPages = 0
