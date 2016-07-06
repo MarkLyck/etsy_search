@@ -90,10 +90,10 @@
         <form class="side-bar-section" action="">
           <p class="sidebar-title">Price ($)</p>
           <div class="price-input-wrapper">
-            <input type="text" name="name" placeholder="Low">
+            <input id="min-price" type="text" name="name" placeholder="Low">
             <p>to</p>
-            <input type="text" name="name" placeholder="High">
-            <button type="button" name="button"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+            <input id="max-price" type="text" name="name" placeholder="High">
+            <button id="filter-price" type="button" name="button"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
           </div>
         </form>
         <div class="side-bar-section">
@@ -167,6 +167,71 @@
       <ul class="item-grid">
 
       </ul>
+      <ul id="pagenation">
+
+      </ul>
+      <hr>
+      <footer>
+        <div class="subscribe">
+          <p>Get top trends and fresh editor's picks in your inbox with Etsy Finds.</p>
+          <button type="button" name="button">Subscribe</button>
+        </div>
+        <nav id="footer-nav">
+          <div class="footer-links">
+            <p>Turn your passion into a business</p>
+            <button type="button" name="button">Open a shop</button>
+            <p>Sell on Etsy</p>
+            <a href="#">Seller Handbook</a>
+            <a href="#">Etsy credit card reader</a>
+            <a href="#">Manufacturing</a>
+          </div>
+          <div class="footer-links">
+            <p>Join the community</p>
+            <a href="#">Teams</a>
+            <a href="#">Forums</a>
+            <a href="#">Upcoming events</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Etsy Local</a>
+          </div>
+          <div class="footer-links">
+            <p>Discover and shop</p>
+            <a href="#">Gift cards</a>
+            <a href="#">Blog</a>
+            <a href="#">Treasury</a>
+            <a href="#">Mobile apps</a>
+            <a href="#">Gift registries</a>
+            <a href="#">Wholesale</a>
+            <a href="#">Search</a>
+            <a href="#">Editor's picks</a>
+          </div>
+          <div class="footer-links">
+            <p>Get to know us</p>
+            <a href="#">About</a>
+            <a href="#">Policies</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+            <a href="#">Developers</a>
+            <a href="#">Investors</a>
+          </div>
+          <div class="footer-links">
+            <p>Follow Etsy</p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Instagram</a>
+          </div>
+        </nav>
+        <div class="localization">
+          <button type="button" name="button"><span id="country">United States</span><span id="language">English(US)</span><span>$(USD)</span></button>
+          <button type="button" name="button">Help</button>
+        </div>
+        <div class="legal">
+          <p>(c) 2016 Etsy Inc.</p>
+          <a href="#">Legal</a>
+          <a href="#">Privacy</a>
+          <a href="#">Interest-based ads</a>
+        </div>
+      </footer>
     </main>
     <!-- <button class="favorite-btn" type="button"><i class="fa fa-heart" aria-hidden="true"></i></button>
     <button class="list-btn" type="button"><i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-caret-down" aria-hidden="true"></i></button> -->
